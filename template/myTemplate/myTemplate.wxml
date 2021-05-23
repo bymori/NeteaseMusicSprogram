@@ -1,0 +1,18 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: by_mori
+ * @Date: 2021-05-23 21:47:44
+ * @LastEditors: by_mori
+ * @LastEditTime: 2021-05-23 21:57:46
+-->
+<!-- 定义模板 -->
+<template name="myTap">
+    <view>
+        <view class="title">这是自定义模板内容</view>
+        <view class="userInfo">
+            <view class="userName">用户名：{{ userName }}</view>
+            <view class="age">年龄：{{ age }}</view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,49 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: by_mori
+ * @Date: 2021-05-22 15:49:59
+ * @LastEditors: by_mori
+ * @LastEditTime: 2021-05-23 09:58:38
+-->
+<view class="songDetailcontainer">
+  <view class="author">{{ song.ar[0].name }}</view>
+  <view class="circle"></view>
+  
+  <!-- <image class="needle {{isPlay?'neddleRotate':''}}" src="/static/images/song/needle.png"></image> -->
+  <image
+    class="needle {{ isPlay && 'neddleRotate' }}"
+    src="/static/images/song/needle.png"
+  ></image>
+
+  <view class="discContainer {{ isPlay && 'discAnimation' }}">
+    <image class="disc" src="/static/images/song/disc.png"></image>
+    <image class="musicImg" src="{{ song.al.picUrl }}"></image>
+  </view>
+  <!-- 进度条控制 -->
+  <view class="progresscontrol">
+    <text>{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="barcontrol">
+      <!-- 实时进度条 -->
+      <view class="audio-currentTime-Bar" style="width: {{currentWidth+'rpx'}}">
+      <!-- <view class="audio-currentTime-Bar" style="width:{{currentWidth}}%"> -->
+        <!-- 小圆圈 -->
+        <view class="audio-circle"></view>
+      </view>
+    </view>
+    <text>{{durationTime}}</text>
+  </view>
+  
+  <!-- 底部控制播放区域 -->
+  <view class="musiccontrol">
+    <text class="iconfont icon-suijibofang"></text>
+    <text class="iconfont icon-shangyiqu" id="pre" bindtap="handleSwitch"></text>
+    <text
+      class="iconfont  {{ isPlay ? 'icon-weibiaoti1' : 'icon-bofang' }} big"
+      bindtap="handleMusicPlay"
+    ></text>
+    <text class="iconfont icon-xiayiqu" bindtap="handleSwitch" id="next"></text>
+    <text class="iconfont icon-gengduo1"></text>
+  </view>
+</view>

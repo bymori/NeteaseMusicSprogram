@@ -1,0 +1,19 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: by_mori
+ * @Date: 2021-05-23 21:38:50
+ * @LastEditors: by_mori
+ * @LastEditTime: 2021-05-23 22:25:05
+-->
+<import src="/template/myTemplate/myTemplate.wxml"/>
+<view class="otherContainer">
+    <!-- 测试模板 -->
+    <view class="otherTitle">测试模板内容</view>
+    <template is="myTap" data="{{...person}}"/>
+
+    <!-- 测试获取用户唯一标识 openId -->
+    <view class="otherTitle">测试获取用户唯一标识 openId</view>
+    <button bindtap="handleGetOpenId">获取 openId</button>
+</view>
+

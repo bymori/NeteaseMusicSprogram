@@ -1,0 +1,38 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: by_mori
+ * @Date: 2021-05-21 23:22:16
+ * @LastEditors: by_mori
+ * @LastEditTime: 2021-05-23 08:01:35
+-->
+<view class="recommendSongContainer">
+    <!-- 头部区域 -->
+    <view class="header">
+        <image class="" src="/static/images/recommendSong/recommendSong.jpg"></image>
+        <view class="date">
+            <text class="day">{{day}} / </text>
+            <text class="month">{{month}}</text>
+            <!-- <text class="year">2021</text> -->
+        </view>
+    </view>
+    <!-- 列表区域 -->
+    <view class="ListconTainer">
+        <view class="listHeard">
+            <text>播放全部</text>
+            <text class="changeMore">多选</text>
+        </view>
+
+        <!-- 内容区域 -->
+        <scroll-view scroll-y class="listScroll">
+            <view class="scrollItem" wx:for="{{recommendList}}" wx:key="{{id}}" data-index="{{index}}" data-song='{{item}}' bindtap="toSongDetail">
+                <image src="{{item.album.picUrl}}"></image>
+                <view class="musicInfo">
+                    <text class="musicName">{{item.name}}</text>
+                    <text class="author">{{item.artists[0].name}}</text>
+                </view>
+                <text class="iconfont icon-gengduo"></text>
+            </view>
+        </scroll-view>
+    </view>
+</view>

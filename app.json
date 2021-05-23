@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/other/other",
+        "pages/search/search",
+        "pages/RecommendedSong/RecommendedSong",
+        "pages/songDetail/songDetail",
+        "pages/video/video",
+        "pages/login/login",
+        "pages/personal/personal",
+        "pages/logs/logs"
+        
+    ],
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "window": {
+        "navigationBarBackgroundColor": "#d43c33",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "沫音乐"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#d85253",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "主页",
+                "iconPath": "/static/images/tabs/tab-home.png",
+                "selectedIconPath": "/static/images/tabs/tab-home-current.png"
+            },
+            {
+                "pagePath": "pages/video/video",
+                "text": "视频",
+                "iconPath": "/static/images/tabs/select.png",
+                "selectedIconPath": "/static/images/tabs/selected.png"
+            },
+            {
+                "pagePath": "pages/personal/personal",
+                "text": "个人中心",
+                "iconPath": "/static/images/tabs/tab-my.png",
+                "selectedIconPath": "/static/images/tabs/tab-my-current.png"
+            }
+        ]
+    },
+    "requiredBackgroundModes": [
+        "audio"
+    ]
+}

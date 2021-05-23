@@ -1,0 +1,24 @@
+{
+  "name": "miniprogram-5",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "_jsbn@1.1.0@jsbn": "^1.1.0",
+    "_miniprogram-sm-crypto@0.3.0@miniprogram-sm-crypto": "^0.3.0",
+    "_pubsub-js@1.9.3@pubsub-js": "^1.9.3",
+    "flyio": "^0.6.14",
+    "jsbn": "^1.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "miniprogram-sm-crypto": "^0.3.0",
+    "moment": "^2.29.1",
+    "pubsub-js": "^1.9.3"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}

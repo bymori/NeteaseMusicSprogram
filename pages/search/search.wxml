@@ -1,0 +1,72 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: by_mori
+ * @Date: 2021-05-23 10:58:36
+ * @LastEditors: by_mori
+ * @LastEditTime: 2021-05-23 21:26:22
+-->
+<view class="cearchContainer">
+    <!-- 头部搜索区域 -->
+    <view class="header">
+        <text class="cancel">取消</text>
+        <view class="searchInput">
+            <text class="iconfont icon-sousuo searchIcon"></text>
+            <input
+                type="text"
+                value="{{searchContent}}"
+                placeholder-class="placeholder"
+                placeholder="{{ placeholderContent }}"
+                bindinput="handleInputChange"
+            />
+            <text class="iconfont icon-guanbi clear" bindtap="clearSearchContent" hidden="{{!searchContent}}"></text>
+        </view>
+    </view>
+    <block wx:if='{{searchList.length}}'>
+        <!-- 搜索内容展示 -->
+        <view class="showSearchContent">
+            <view class="searchContent">搜索内容：{{ searchContent }}</view>
+            <view class="searchList">
+                <view
+                    class="searchItem"
+                    wx:for="{{ searchList }}"
+                    wx:key="{{ id }}"
+                >
+                    <text class="iconfont icon-sousuo"></text>
+                    <text class="content">{{ item.name }}</text>
+                </view>
+            </view>
+        </view>
+    </block>
+
+    <block wx:else>
+        <!-- 搜索历史 -->
+        <view class="history" wx:if="{{historyList.length}}">
+            <view class="title">历史</view>
+            <view class="hisoryItem" wx:for="{{historyList}}" wx:key="{{item}}">
+                {{item}}
+            </view>
+            <text class="iconfont icon-shanchu1 delete" bindtap="deleteSearchHistory"></text>
+        </view>
+        <!-- 搜索热搜榜 -->
+        <view class="hotcontainer">
+            <view class="hotTitle">热搜榜</view>
+            <!-- 热搜列表 -->
+            <view class="hotList">
+                <view
+                    class="hotItem"
+                    wx:for="{{ hotList }}"
+                    wx:key="searchWord"
+                >
+                    <text class="order">{{ index + 1 }}</text>
+                    <text>{{ item.searchWord }}</text>
+                    <image
+                        class="iconImg"
+                        wx:if="{{ item.iconUrl }}"
+                        src="{{ item.iconUrl }}"
+                    ></image>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

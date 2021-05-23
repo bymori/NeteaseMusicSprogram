@@ -1,0 +1,16 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: by_mori
+ * @Date: 2021-05-19 11:28:20
+ * @LastEditors: by_mori
+ * @LastEditTime: 2021-05-19 11:53:11
+-->
+
+<view class="header">
+    <text class="title">{{title}}</text>
+    <view>
+        <text>{{nav}}</text>
+        <text class="more">更多></text>
+    </view>
+</view>
