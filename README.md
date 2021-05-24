@@ -118,7 +118,7 @@ API 源代码来自 [Binaryify/NeteaseCloudMusicApi](https://github.com/Binaryif
 
 ## 🖼️ 截图
 
-![1.主页](./static\Project_picture\1.主页.png)
+![1.主页](./static/Project_picture/1.主页.png)
 
 ![2.每日推荐](D:\Test_project\Github\NeteaseMusicSprogram\static\Project_picture\2.每日推荐.png)
 
