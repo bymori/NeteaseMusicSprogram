@@ -120,9 +120,9 @@ API 源代码来自 [Binaryify/NeteaseCloudMusicApi](https://github.com/Binaryif
 
 ![1.主页](./static/Project_picture/1.主页.png)
 
-![2.每日推荐](./static/Project_picture2/.每日推荐.png)
+![2.每日推荐](./static/Project_picture/.每日推荐.png)
 
-![3.视频]((./static/Project_picture2/3.视频.png)
+![3.视频]((./static/Project_picture/3.视频.png)
 
-![4.搜索](./static/Project_picture2/4.搜索.png)
+![4.搜索](./static/Project_picture/4.搜索.png)
 
