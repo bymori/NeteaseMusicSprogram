@@ -86,7 +86,7 @@
   ### 技术栈
   - 微信原生小程序开发
   - WX组件 & API: 使用原生架构建设
-  - axios：发起http请求
+  - ajax：发起http请求
   - ES6：采用ES6语法。
   - HTML5: 项目主体结构搭建
   - JavaScript: 对网页行为进行编程
