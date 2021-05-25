@@ -4,7 +4,7 @@
  * @Author: by_mori
  * @Date: 2021-05-21 23:22:16
  * @LastEditors: by_mori
- * @LastEditTime: 2021-05-23 08:38:45
+ * @LastEditTime: 2021-05-25 12:51:53
  */
 // pages/RecommendedSong/RecommendedSong.js
 //import request from '../../utils/request'
@@ -18,6 +18,7 @@ Page({
         day: '', //天
         month: '', //月
         recommendList: [], // 推荐列表数据
+        a:[],
         index: 0, //点击音乐的下标
     },
 
@@ -79,7 +80,7 @@ Page({
         let recommendListData = await request('/recommend/songs');
         console.log(recommendListData);
         this.setData({
-            recommendList: recommendListData.recommend,
+            recommendList: recommendListData.data.dailySongs,
         });
     },
 

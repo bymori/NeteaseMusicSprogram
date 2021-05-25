@@ -4,7 +4,7 @@
  * @Author: by_mori
  * @Date: 2021-05-21 23:22:16
  * @LastEditors: by_mori
- * @LastEditTime: 2021-05-23 08:01:35
+ * @LastEditTime: 2021-05-25 12:53:38
 -->
 <view class="recommendSongContainer">
     <!-- 头部区域 -->
@@ -26,10 +26,10 @@
         <!-- 内容区域 -->
         <scroll-view scroll-y class="listScroll">
             <view class="scrollItem" wx:for="{{recommendList}}" wx:key="{{id}}" data-index="{{index}}" data-song='{{item}}' bindtap="toSongDetail">
-                <image src="{{item.album.picUrl}}"></image>
+                <image src="{{item.al.picUrl}}"></image>
                 <view class="musicInfo">
                     <text class="musicName">{{item.name}}</text>
-                    <text class="author">{{item.artists[0].name}}</text>
+                    <text class="author">{{item.ar[0].name}}</text>
                 </view>
                 <text class="iconfont icon-gengduo"></text>
             </view>

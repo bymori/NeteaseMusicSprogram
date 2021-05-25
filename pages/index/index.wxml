@@ -4,7 +4,7 @@
  * @Author: by_mori
  * @Date: 2021-05-18 20:08:46
  * @LastEditors: by_mori
- * @LastEditTime: 2021-05-23 22:54:46
+ * @LastEditTime: 2021-05-25 12:41:25
 -->
 <view class="indexContainer">
     <!-- 轮播图区域 -->
@@ -49,13 +49,15 @@
             </view>
         </scroll-view>
     </view>
+    <p ></p>
+    
     <!-- 排行榜区域 -->
     <view class="topList">
         <!-- 排行榜头部区域 -->
         <NavHeader title="排行榜" nav="热歌风向标"></NavHeader>
         <!-- 排行榜内容区域 -->
         <swiper class="topListSwiper" previous-margin="40rpx" next-margin="50rpx">
-            <swiper-item wx:for="{{topList}}" wx:key="name">
+            <swiper-item wx:for="{{topList}}" wx:key="id">
                 <view class="swiperItem">
                 <view class="title">{{item.name}}</view>
                 <view class="musicItem" wx:for="{{item.tarcks}}" wx:key="id" wx:for-item="musicItem">
