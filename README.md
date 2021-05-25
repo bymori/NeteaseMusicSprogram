@@ -48,12 +48,10 @@
 
   ```
   $ git clone git@github.com:bymori/NeteaseMusicSprogram.git
-
 - 运行 `cd 至 netease_api`
 
   ```
   $ node app.js
-
 - 使用说明
 
   - 项目目录结构
