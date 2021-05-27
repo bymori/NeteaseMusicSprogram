@@ -1,10 +1,10 @@
 /*
- * @Descripttion: 
- * @version: 
+ * @Descripttion:
+ * @version:
  * @Author: by_mori
  * @Date: 2021-05-18 23:31:29
  * @LastEditors: by_mori
- * @LastEditTime: 2021-05-22 20:22:03
+ * @LastEditTime: 2021-05-25 10:23:48
  */
 //发送 ajax请求
 /*
@@ -27,33 +27,38 @@
         }
 */
 
-import config from "./config"
-export default (url,data={},method='GET')=>{
-    return new Promise((resolve,reject)=>{
+import config from './config';
+export default (url, data = {}, method = 'GET') => {
+    return new Promise((resolve, reject) => {
         //1.new Promise 初始化 promise 实例的状态为pending
         wx.request({
-            url:config.host+url,
+            url: config.host_Api + url,
             data,
             method,
-            header:{
+            header: {
                 //cookie:wx.getStorageSync('cookies')[2] //登录返回数组顺序不一
-                cookie:wx.getStorageSync('cookies')?wx.getStorageSync('cookies').find(item=>item.indexOf('MUSIC_U')!==-1):'' //返回指定的值 的下标
+                cookie: wx.getStorageSync('cookies')
+                    ? wx
+                          .getStorageSync('cookies')
+                          .find((item) => item.indexOf('MUSIC_U') !== -1)
+                    : '', //返回指定的值 的下标
             },
             success: (res) => {
-              //console.log("请求成功：",res);
-              //console.log(res); //登录返回全部数据
-              if (data.isLogin) {
-                  wx.setStorage({ //登录请求
-                      key: 'cookies',
-                      data: res.cookies
-                  })
-              }
-              resolve(res.data) //resolve 修改promise的状态为成功状态resolve
+                //console.log("请求成功：",res);
+                //console.log(res); //登录返回全部数据
+                if (data.isLogin) {
+                    wx.setStorage({
+                        //登录请求
+                        key: 'cookies',
+                        data: res.cookies,
+                    });
+                }
+                resolve(res.data); //resolve 修改promise的状态为成功状态resolve
             },
             fail: (err) => {
-              //console.log("请求失败：",err);
-              reject(err) //reject 修改promise的状态为失败状态reject
-             }
-        })
-    })
-}
+                //console.log("请求失败：",err);
+                reject(err); //reject 修改promise的状态为失败状态reject
+            },
+        });
+    });
+};
