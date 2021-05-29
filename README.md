@@ -1,7 +1,7 @@
 # NeteaseMusicSprogram
 # 微信小程序-网易云音乐App
 
-> Vue+Nodejs 仿网易云音乐 Android 客户端实战
+> Vue+Nodejs 仿网易云音乐 Android 客户端实战 微信小程序版本
 >
 > 学习微信小程序迭代而出的产品，根据小破站某视频教学更新优化而来
 >
@@ -48,12 +48,10 @@
 
   ```
   $ git clone git@github.com:bymori/NeteaseMusicSprogram.git
-
 - 运行 `cd 至 netease_api`
 
   ```
   $ node app.js
-
 - 使用说明
 
   - 项目目录结构
